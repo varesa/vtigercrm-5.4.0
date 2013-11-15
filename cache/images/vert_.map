@@ -1,0 +1,4 @@
+<img src="cache/images/vert_" border="0" usemap="#cache/images/vert_">
+<map name="cache/images/vert_">
+	<area shape="rect" coords="167,114,417,161" href="index.php?module=Contacts&action=ListView&from_homepagedb=true&type=dbrd&query=true&owner=Juhani Varemo&viewname=7" alt="Contacts=%d" title="Contacts=%d">
+</map>
