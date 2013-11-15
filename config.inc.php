@@ -53,7 +53,7 @@ $dbconfig['db_password'] = '';
 $dbconfig['db_name'] = '';
 $dbconfig['db_type'] = 'mysql';*/
 
-require_once('config.secrets.php')
+include('config.secrets.php');
 
 
 $dbconfig['db_status'] = 'true';
