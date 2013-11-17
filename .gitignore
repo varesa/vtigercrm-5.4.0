@@ -3,5 +3,5 @@ logs/*
 storage/*
 cache/*
 backup/*
-
+user_privileges/*
 **fi_fi*
