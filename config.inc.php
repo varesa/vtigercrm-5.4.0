@@ -85,10 +85,10 @@ $dbconfigoption['ssl'] = false;
 
 $host_name = $dbconfig['db_hostname'];
 
-$site_URL = 'http://192.168.0.108/vtigercrm-5.4.0newinstall/vtigercrm';
+$site_URL = 'http://192.168.0.108/vtigercrm-5.4.0';
 
 // root directory path
-$root_directory = '/var/www/html/vtigercrm-5.4.0newinstall/vtigercrm/';
+$root_directory = '/var/www/html/vtigercrm-5.4.0/';
 
 // cache direcory path
 $cache_dir = 'cache/';
