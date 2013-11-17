@@ -27,10 +27,20 @@ require_once("VTWorkflowUtils.php");
 		}
 
 		$description = from_html($request["description"]);
-		$moduleName = $request["module_name"];
+		$moduleName = vtlib_purify($request["module_name"]);
 		$conditions = $request["conditions"];
 		$taskId = $request["task_id"];
-		$saveType=$request["save_type"];
+		$saveType= vtlib_purify($request["save_type"]);
+		//OnDemand Specific Starts
+		$schtypeid=$request["schtypeid"];
+		$schtime=$request["s_time"];
+		if(!preg_match('/^[0-2]\d(:[0-5]\d){1,2}$/', $schtime) or substr($schtime,0,2)>23) {  // invalid time format
+		    $schtime='00:00';
+		}
+		$schdayofmonth=$request["s_dayofmonth"];
+		$schdayofweek=$request["s_dayofweek"];
+		$schmonth=$request["s_month"];
+		//OnDemand Specific Ends
 		$executionCondition = $request['execution_condition'];
 		$wm = new VTWorkflowManager($adb);
 		if($saveType=='new'){
@@ -39,6 +49,14 @@ require_once("VTWorkflowUtils.php");
 			$wf->test = $conditions;
 			$wf->taskId = $taskId;
 			$wf->executionConditionAsLabel($executionCondition);
+			$wf->filtersavedinnew = 5;
+			//OnDemand Specific Starts
+			$wf->schtypeid = $schtypeid;
+			$wf->schtime = $schtime;
+			$wf->schdayofmonth = $schdayofmonth;
+			$wf->schdayofweek = $schdayofweek;
+			$wf->schmonth = $schmonth;
+			//OnDemand Specific Ends
 			$wm->save($wf);
 		}else if($saveType=='edit'){
 			$wf = $wm->retrieve($request["workflow_id"]);
@@ -46,12 +64,20 @@ require_once("VTWorkflowUtils.php");
 			$wf->test = $conditions;
 			$wf->taskId = $taskId;
 			$wf->executionConditionAsLabel($executionCondition);
+			$wf->filtersavedinnew = 5;
+			//OnDemand Specific Starts
+			$wf->schtypeid = $schtypeid;
+			$wf->schtime = $schtime;
+			$wf->schdayofmonth = $schdayofmonth;
+			$wf->schdayofweek = $schdayofweek;
+			$wf->schmonth = $schmonth;
+			//OnDemand Specific Ends
 			$wm->save($wf);
 		}else{
 			throw new Exception();
 		}
-		if(isset($request["return_url"])){
-			$returnUrl=$request["return_url"];
+		if(isset(vtlib_purify($request["return_url"]))){
+			$returnUrl=vtlib_purify($request["return_url"]);
 		}else{
 			$returnUrl=$module->editWorkflowUrl($wf->id);
 		}
@@ -61,8 +87,8 @@ require_once("VTWorkflowUtils.php");
 		</script>
 		<a href="<?php echo $returnUrl?>">Return</a>
 		<?php
-		
+
 	}
-	
+
 	vtWorkflowSave($adb, $_REQUEST);
 ?>

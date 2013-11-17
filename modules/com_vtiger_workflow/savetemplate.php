@@ -27,14 +27,14 @@ function vtSaveWorkflowTemplate($adb, $request){
 		return;
 	}
 
-	$title = $request['title'];
+	$title = vtlib_purifyForSql($request['title']);
 	$workflowId = $request['workflow_id'];
 	$wfs = new VTworkflowManager($adb);
 	$workflow = $wfs->retrieve($workflowId);
 	$tm = new VTWorkflowTemplateManager($adb);
 	$tpl = $tm->newTemplate($title, $workflow);
 	$tm->saveTemplate($tpl);
-	$returnUrl = $request['return_url'];
+	$returnUrl = vtlib_purify($request['return_url']);
 	?>
 		<script type="text/javascript" charset="utf-8">
 			 window.location="<?php echo $returnUrl?>";

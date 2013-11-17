@@ -59,10 +59,10 @@
 			var reg1 = /^([0-9]*)$/;
 			name.value = trim(name.value);
 			if ((name.value).indexOf("\"") != -1 || (name.value).indexOf("'") != -1 || (name.value).indexOf(";") != -1){
-						var invalidSupportName = document.getElementById('invalidSupportName').value;
-						document.getElementById('msg_HELPDESK_SUPPORT_NAME').innerHTML = invalidSupportName;
-						name.focus();
-						return false;
+				var invalidSupportName = document.getElementById('invalidSupportName').value;
+				document.getElementById('msg_HELPDESK_SUPPORT_NAME').innerHTML = invalidSupportName;
+				name.focus();
+				return false;
 			}
 
 			maxEntries.value = trim(maxEntries.value);
@@ -238,7 +238,7 @@
 																				{if $CONFIGLINE->variableName() == 'upload_maxsize'}
 																				<input size="2" type="text" name="key_{$CONFIGLINE->variableName()}" id="key_{$CONFIGLINE->variableName()}" value="{$CONFIGLINE->variableValue()}"  onblur="class='detailedViewTextBoxThis'" onfocus="class='detailedViewTextBoxThisOn'" class="detailedViewTextBoxThis" >     {$MOD.LBL_MB}
 																				{else}
-																						<input type="text" name="key_{$CONFIGLINE->variableName()}" id="key_{$CONFIGLINE->variableName()}" value="{$CONFIGLINE->variableValue()}"  onblur="this.className='detailedViewTextBox'" onfocus="this.className='detailedViewTextBoxOn'" class="detailedViewTextBox" >
+																				<input type="text" name="key_{$CONFIGLINE->variableName()}" id="key_{$CONFIGLINE->variableName()}" value="{$CONFIGLINE->variableValue()}"  onblur="this.className='detailedViewTextBox'" onfocus="this.className='detailedViewTextBoxOn'" class="detailedViewTextBox" >
 																				{/if}
 																			{/if}
 																		{else}
