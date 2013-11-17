@@ -3,7 +3,8 @@ logs/*
 storage/*
 cache/*
 backup/*
-user_privileges/*
+user_privileges/user_privileges*
+user_privileges/sharing_privileges*
 Smarty/templates_c/*
 
 **fi_fi*
