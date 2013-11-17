@@ -156,6 +156,7 @@ if ($adb->dbType == "pgsql")
 	$list_result = $adb->pquery($list_query . " OFFSET $limit_start_rec LIMIT $list_max_entries_per_page", array());
 else
 	$list_result = $adb->pquery($list_query . " LIMIT $limit_start_rec, $list_max_entries_per_page", array());
+
 //Constructing the list view
 $smarty->assign("CUSTOMVIEW_OPTION", $customviewcombo_html);
 $smarty->assign("VIEWID", $viewid);
@@ -181,7 +182,6 @@ $listview_header = getListViewHeader($focus, "Emails", $url_string, $sorder, $or
 $smarty->assign("LISTHEADER", $listview_header);
 
 $listview_entries = getListViewEntries($focus, "Emails", $list_result, $navigation_array, "", "", "EditView", "Delete", $oCustomView);
-$log->debug($listview_entries);
 //--------------------------added to fix the ticket(4386)------------------------START
 foreach ($listview_entries as $key => $value) {
 	$sql = "select email_flag from vtiger_emaildetails where emailid=?";
