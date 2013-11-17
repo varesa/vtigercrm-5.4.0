@@ -4,4 +4,6 @@ storage/*
 cache/*
 backup/*
 user_privileges/*
+Smarty/templates_c/*
+
 **fi_fi*
