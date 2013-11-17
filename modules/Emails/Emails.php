@@ -503,7 +503,8 @@ class Emails extends CRMEntity {
 	}
 
 	public function getNonAdminAccessControlQuery($module, $user, $scope='') {
-		return " and vtiger_crmentity$scope.smownerid=$user->id ";
+		//return " and vtiger_crmentity$scope.smownerid=$user->id "; // Allow everyone to see emails
+		return "";
 	}
 
 }
