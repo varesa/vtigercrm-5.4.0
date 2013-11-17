@@ -171,7 +171,9 @@ $default_charset = 'UTF-8';
 
 // default language
 // default_language default value = en_us
-$default_language = 'en_us';
+$default_language = 'fi_fi';
+
+$languages = Array('en_us'=>'English', 'fi_fi'=>'Suomi');
 
 // add the language pack name to every translation string in the display.
 // translation_string_prefix default value = false
