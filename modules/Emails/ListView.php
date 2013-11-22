@@ -110,6 +110,8 @@ if ($viewid != "0") {
 }
 //<<<<<<<<customview>>>>>>>>>
 
+$list_query = str_replace("vtiger_activity.date_start", "vtiger_crmentity.modifiedtime as date_start", $list_query);
+
 if (isset($where) && $where != '') {
 	$list_query .= " AND " . $where;
 }
@@ -180,7 +182,6 @@ $smarty->assign("NAVIGATION", $navigationOutput);
 
 $listview_header = getListViewHeader($focus, "Emails", $url_string, $sorder, $order_by, "", $oCustomView);
 $smarty->assign("LISTHEADER", $listview_header);
-
 $listview_entries = getListViewEntries($focus, "Emails", $list_result, $navigation_array, "", "", "EditView", "Delete", $oCustomView);
 //--------------------------added to fix the ticket(4386)------------------------START
 foreach ($listview_entries as $key => $value) {
