@@ -211,7 +211,8 @@ function setMailerProperties($mail,$subject,$contents,$from_email,$from_name,$to
 
 	//commented so that it does not add from_email in reply to
 	//$mail->AddReplyTo($from_email);
-	$mail->WordWrap = 50;
+	$mail->WordWrap = 75;
+	//$mail->WordWrap = 50; rivinpituutta kasvatettu by jv 19.11.2013
 
 	//If we want to add the currently selected file only then we will use the following function
 	if($attachment == 'current' && $emailid != '')
