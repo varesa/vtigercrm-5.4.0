@@ -1460,7 +1460,7 @@ if (typeof(MailManager) == 'undefined') {
         },
 
         mail_validate : function(str) {
-            var email_regex = /^[a-zA-Z0-9]+([\_\-\.]*[a-zA-Z0-9]+[\_\-]?)*@[a-zA-Z0-9]+([\_\-]?[a-zA-Z0-9]+)*\.+([\_\-]?[a-zA-Z0-9])+(\.?[a-zA-Z0-9]+)*$/;
+            var email_regex = /^[a-zA-Z0-9]+([\_\-\.\+]*[a-zA-Z0-9]+[\_\-]?)*@[a-zA-Z0-9]+([\_\-]?[a-zA-Z0-9]+)*\.+([\_\-]?[a-zA-Z0-9])+(\.?[a-zA-Z0-9]+)*$/;
             arr = new Array();
             arr = str.split(",");
             var tmp;
