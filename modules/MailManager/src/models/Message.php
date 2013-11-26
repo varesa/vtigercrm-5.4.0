@@ -487,6 +487,8 @@ class MailManager_Model_Message extends Vtiger_MailRecord  {
 	function date($format = false) {
 		$date = $this->_date;
 		if ($format) {
+			return date('d.m.Y H:i:s', strtotime($date)); // Just get the full date, ignore the following rows
+		
 			if (preg_match(sprintf("/%s ([^ ]+)/", date('D, d M Y')), $date, $m)) {
 				$date = $m[1]; // Pick only time part for today
 			} else if (preg_match("/[a-zA-Z]{3}, ([0-9]{1,2} [a-zA-Z]{3} [0-9]{4})/", $date, $m)) {
