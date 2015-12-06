@@ -14,7 +14,7 @@ $MAILMANAGER_CONFIG = array(
 
     // Max Download Limit in Bytes, as the files are encoded the file size increases
     // so the limit is set to close to 7MB
-    'MAXDOWNLOADLIMIT'=>7000000,
+    'MAXDOWNLOADLIMIT'=>70000000,
     
 	// Increase the memory_limit for larger attachments
 	'MEMORY_LIMIT'	=> '256M'
