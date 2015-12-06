@@ -22,6 +22,7 @@
 			$("#mail_fldrname").remove();
 			$(".mailSubHeader").remove();
 			$("button").remove();
+			$("#open_email_con tr").first().remove();
 		    }
 		);
 	</script>
