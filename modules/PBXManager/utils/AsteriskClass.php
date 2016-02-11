@@ -105,7 +105,7 @@ class Asterisk {
 				$context = "from-inside";//"outbound-dialing";
 				break;
 			default:
-				$context = "default";
+				$context = "from-internal";
 		}
 		$this->createCall($from, $to, $context);
 	}	
