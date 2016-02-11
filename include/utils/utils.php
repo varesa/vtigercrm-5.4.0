@@ -1013,7 +1013,11 @@ function to_html($string, $encode=true)
 	//$log->debug("Entering to_html(".$string.",".$encode.") method ...");
 	global $toHtml;
 	$action = vtlib_purify($_REQUEST['action']);
-	$search = vtlib_purify($_REQUEST['search']);
+	if(array_key_exists('search', $_REQUEST)) {
+		$search = vtlib_purify($_REQUEST['search']);
+	} else {
+		$search = "";
+	}
 
 	$doconvert = false;
 
