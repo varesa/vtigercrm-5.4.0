@@ -35,7 +35,7 @@ class VtigerCompanyDetails extends VtigerActorOperation {
 		$fileFieldList = $this->meta->getFieldListByType('file');
 		foreach ($fileFieldList as $field) {
 			$fieldname = $field->getFieldName();
-			if(is_array($_FILES[$fieldname])) {
+			if(is_array($__FILES[$fieldname])) {
 				$element[$fieldname] = vtws_CreateCompanyLogoFile($fieldname);
 			}
 		}

@@ -21,21 +21,21 @@ $log->debug("DEBUG In add2db.php");
 	if(isset($_REQUEST['filename_hidden'])) {
 		$file = vtlib_purify($_REQUEST['filename_hidden']);
 	} else {
-		$file = $_FILES['filename']['name'];
+		$file = $__FILES['filename']['name'];
 	}
 	$binFile = sanitizeUploadFileName($file, $upload_badext);
-	$_FILES["filename"]["name"] = $binFile;
+	$__FILES["filename"]["name"] = $binFile;
 
 	//decide the file path where we should upload the file in the server
 	$upload_filepath = decideFilePath();
 
 	$current_id = $adb->getUniqueID("vtiger_crmentity");
 	
-	if(move_uploaded_file($_FILES["filename"]["tmp_name"],$upload_filepath.$current_id."_".$_FILES["filename"]["name"])) 
+	if(move_uploaded_file($__FILES["filename"]["tmp_name"],$upload_filepath.$current_id."_".$__FILES["filename"]["name"])) 
 	{
 		$filename = ltrim(basename(" ".$binFile)); //allowed filename like UTF-8 characters 
-		$filetype= $_FILES['filename']['type'];
-		$filesize = $_FILES['filename']['size'];
+		$filetype= $__FILES['filename']['type'];
+		$filesize = $__FILES['filename']['size'];
 
 		if($filesize != 0)	
 		{
@@ -119,7 +119,7 @@ $log->debug("DEBUG In add2db.php");
 	} 
 	else 
 	{
-		$errorCode =  $_FILES['binFile']['error'];
+		$errorCode =  $__FILES['binFile']['error'];
 		$errormessage = "";
 
 		if($errorCode == 4)

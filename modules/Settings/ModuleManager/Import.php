@@ -29,7 +29,7 @@ if($module_import_step == 'Step2') {
 	$uploadfilename = "$modulemanager_uploaddir/$uploadfile";
 	checkFileAccess($modulemanager_uploaddir);
 
-	if(!move_uploaded_file($_FILES['module_zipfile']['tmp_name'], $uploadfilename)) {
+	if(!move_uploaded_file($__FILES['module_zipfile']['tmp_name'], $uploadfilename)) {
 		$smarty->assign("MODULEIMPORT_FAILED", "true");
 	} else {
 		$package = new Vtiger_Package();

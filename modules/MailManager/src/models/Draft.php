@@ -221,7 +221,7 @@ class MailManager_Model_DraftEmail {
 	function saveAttachment($request) {
 		global $current_user, $adb;
 
-		//need to handle earlier as Emails save will save the uploaded files from $_FILES
+		//need to handle earlier as Emails save will save the uploaded files from $__FILES
 		$uploadResponse = $this->handleUpload();
 
 		$emailId = $this->saveDraft($request);

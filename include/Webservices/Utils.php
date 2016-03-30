@@ -450,9 +450,9 @@ function vtws_CreateCompanyLogoFile($fieldname) {
 	global $root_directory;
 	$uploaddir = $root_directory ."/test/logo/";
 	$allowedFileTypes = array("jpeg", "png", "jpg", "pjpeg" ,"x-png");
-	$binFile = $_FILES[$fieldname]['name'];
-	$fileType = $_FILES[$fieldname]['type'];
-	$fileSize = $_FILES[$fieldname]['size'];
+	$binFile = $__FILES[$fieldname]['name'];
+	$fileType = $__FILES[$fieldname]['type'];
+	$fileSize = $__FILES[$fieldname]['size'];
 	$fileTypeArray = explode("/",$fileType);
 	$fileTypeValue = strtolower($fileTypeArray[1]);
 	if($fileTypeValue == '') {
@@ -460,8 +460,8 @@ function vtws_CreateCompanyLogoFile($fieldname) {
 	}
 	if($fileSize != 0) {
 		if(in_array($fileTypeValue, $allowedFileTypes)) {
-			move_uploaded_file($_FILES[$fieldname]["tmp_name"],
-					$uploaddir.$_FILES[$fieldname]["name"]);
+			move_uploaded_file($__FILES[$fieldname]["tmp_name"],
+					$uploaddir.$__FILES[$fieldname]["name"]);
 			return $binFile;
 		}
 		throw new WebServiceException(WebServiceErrorCode::$INVALIDTOKEN,

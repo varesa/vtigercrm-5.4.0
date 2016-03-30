@@ -220,7 +220,7 @@ function setMailerProperties($mail,$subject,$contents,$from_email,$from_name,$to
 		if (isset($_REQUEST['filename_hidden'])) {
 			$file_name = $_REQUEST['filename_hidden'];
 		} else {
-			$file_name = $_FILES['filename']['name'];
+			$file_name = $__FILES['filename']['name'];
 		}
 		addAttachment($mail,$file_name,$emailid);
 	}

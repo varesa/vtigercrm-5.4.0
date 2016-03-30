@@ -116,7 +116,7 @@ class MailManager_UploadFileForm extends qqUploadedFileForm {
 		global $root_directory;
 		if(is_file($root_directory."/".$path)) {
 			return true;
-		} else if(move_uploaded_file($_FILES['qqfile']['tmp_name'], $path)) {
+		} else if(move_uploaded_file($__FILES['qqfile']['tmp_name'], $path)) {
 			return true;
 		}
 		return false;
@@ -226,7 +226,7 @@ class MailManager_Uploader extends qqFileUploader {
 
 		if (isset($_GET['qqfile'])) {
 			$this->file = new MailManager_UploadFileXHR();
-		} elseif (isset($_FILES['qqfile'])) {
+		} elseif (isset($__FILES['qqfile'])) {
             $this->file = new MailManager_UploadFileForm();
         } else {
             $this->file = false;

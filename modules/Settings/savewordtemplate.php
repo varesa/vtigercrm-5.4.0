@@ -16,19 +16,19 @@ $uploaddir = $root_directory ."/test/upload/" ;// set this to wherever
 if(isset($_REQUEST['binFile_hidden'])) {
 	$file = vtlib_purify($_REQUEST['binFile_hidden']);
 } else {
-	$file = $_FILES['binFile']['name'];
+	$file = $__FILES['binFile']['name'];
 }
 $binFile = sanitizeUploadFileName($file, $upload_badext);
-$_FILES["binFile"]["name"] = $binFile;
+$__FILES["binFile"]["name"] = $binFile;
 $strDescription = vtlib_purify($_REQUEST['txtDescription']);
 // Vulnerability fix ends
-if(move_uploaded_file($_FILES["binFile"]["tmp_name"],$uploaddir.$_FILES["binFile"]["name"])) 
+if(move_uploaded_file($__FILES["binFile"]["tmp_name"],$uploaddir.$__FILES["binFile"]["name"])) 
 {
-  $binFile = $_FILES['binFile']['name'];
+  $binFile = $__FILES['binFile']['name'];
   //$filename = basename($binFile);
   $filename = ltrim(basename(" ".$binFile)); //allowed filenames start with UTF-8 characters 
-  $filetype= $_FILES['binFile']['type'];
-  $filesize = $_FILES['binFile']['size'];
+  $filetype= $__FILES['binFile']['type'];
+  $filesize = $__FILES['binFile']['size'];
 
   $error_flag ="";
   $filetype_array = explode("/",$filetype);
@@ -104,7 +104,7 @@ if(move_uploaded_file($_FILES["binFile"]["tmp_name"],$uploaddir.$_FILES["binFile
 } 
 else 
 {
-	$errorCode =  $_FILES['binFile']['error'];
+	$errorCode =  $__FILES['binFile']['error'];
 	if($errorCode == 4)
 	{
 		include('modules/Vtiger/header.php');

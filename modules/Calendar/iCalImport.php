@@ -17,7 +17,7 @@ global $import_dir,$current_user,$mod_strings,$app_strings,$currentModule;
 if($_REQUEST['step']!='undo'){
 	$last_import = new iCalLastImport();
 	$last_import->clearRecords($current_user->id);
-	$file_details = $_FILES['ics_file'];
+	$file_details = $__FILES['ics_file'];
 	$binFile = 'vtiger_import'.date('YmdHis');
 	$file = $import_dir.''.$binFile;
 	$filetmp_name = $file_details['tmp_name'];

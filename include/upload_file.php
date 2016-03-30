@@ -86,12 +86,12 @@ class UploadFile
 		global $upload_badext;
 
 
-		if (!is_uploaded_file($_FILES[$this->field_name]['tmp_name']) )
+		if (!is_uploaded_file($__FILES[$this->field_name]['tmp_name']) )
 		{
 			$log->debug("Exiting confirm_upload method ...");
 			return false;
 		}
-		else if ($_FILES[$this->field_name]['size'] > $upload_maxsize)
+		else if ($__FILES[$this->field_name]['size'] > $upload_maxsize)
 		{
 			die("ERROR: uploaded file was too big: max filesize:$upload_maxsize");
 		}
@@ -103,7 +103,7 @@ class UploadFile
 		}
 
 		require_once('include/utils/utils.php');
-		$this->stored_file_name = sanitizeUploadFileName($_FILES[$this->field_name]['name'], $upload_badext);
+		$this->stored_file_name = sanitizeUploadFileName($__FILES[$this->field_name]['name'], $upload_badext);
 		$log->debug("Exiting confirm_upload method ...");
 		return true;
 	}
@@ -136,7 +136,7 @@ class UploadFile
 
                 $destination = $root_directory.'/'.$upload_dir.$file_name;
 
-		if (!move_uploaded_file($_FILES[$this->field_name]['tmp_name'], $destination))
+		if (!move_uploaded_file($__FILES[$this->field_name]['tmp_name'], $destination))
                 {
 			die ("ERROR: can't move_uploaded_file to $destination");
                 }

@@ -1646,7 +1646,7 @@ function upload_product_image_file($mode,$id)
         $log->debug("Inside upload_product_image_file. The id is ".$id);
 	$uploaddir = $root_directory ."/test/product/";
 
-	$file_path_name = $_FILES['imagename']['name'];
+	$file_path_name = $__FILES['imagename']['name'];
 	if (isset($_REQUEST['imagename_hidden'])) {
 		$file_name = $_REQUEST['imagename_hidden'];
 	} else {
@@ -1654,15 +1654,15 @@ function upload_product_image_file($mode,$id)
 		$file_name = ltrim(basename(" ".$file_path_name)); // basename($file_path_name);
 	}
 	$file_name = $id.'_'.$file_name;
-	$filetype= $_FILES['imagename']['type'];
-	$filesize = $_FILES['imagename']['size'];
+	$filetype= $__FILES['imagename']['type'];
+	$filesize = $__FILES['imagename']['size'];
 
 	$ret_array = Array();
 
 	if($filesize > 0)
 	{
 
-		if(move_uploaded_file($_FILES["imagename"]["tmp_name"],$uploaddir.$file_name))
+		if(move_uploaded_file($__FILES["imagename"]["tmp_name"],$uploaddir.$file_name))
 		{
 
 			$upload_status = "yes";
@@ -1673,7 +1673,7 @@ function upload_product_image_file($mode,$id)
 		}
 		else
 		{
-			$errorCode =  $_FILES['imagename']['error'];
+			$errorCode =  $__FILES['imagename']['error'];
 			$upload_status = "no";
 			$ret_array["status"] = $upload_status;
 			$ret_array["errorcode"] = $errorCode;

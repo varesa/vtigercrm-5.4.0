@@ -39,7 +39,7 @@ if (!isset($_REQUEST['email_opt_out'])) $focus->email_opt_out = 'off';
 if (!isset($_REQUEST['do_not_call'])) $focus->do_not_call = 'off';
 
 //Checking If image is given or not
-//$image_upload_array=SaveImage($_FILES,'contact',$focus->id,$focus->mode);
+//$image_upload_array=SaveImage($__FILES,'contact',$focus->id,$focus->mode);
 $image_name_val=$image_upload_array['imagename'];
 $image_error="false";
 $errormessage=$image_upload_array['errormessage'];
@@ -90,13 +90,13 @@ if($saveimage=="true")
         $log->debug("Assign the Image name to the vtiger_field name ");
 }
 
-//if image added then we have to set that $_FILES['name'] in imagename field then only the image will be displayed
-if($_FILES['imagename']['name'] != '')
+//if image added then we have to set that $__FILES['name'] in imagename field then only the image will be displayed
+if($__FILES['imagename']['name'] != '')
 {
 	if(isset($_REQUEST['imagename_hidden'])) {
 		$focus->column_fields['imagename'] = vtlib_purify($_REQUEST['imagename_hidden']);
 	} else {
-		$focus->column_fields['imagename'] = $_FILES['imagename']['name'];
+		$focus->column_fields['imagename'] = $__FILES['imagename']['name'];
 	}
 }
 elseif($focus->id != '')

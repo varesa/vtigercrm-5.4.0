@@ -50,8 +50,8 @@ class uploader {
         $this->cookie = &$input->cookie;
 
         // LINKING UPLOADED FILE
-        if (count($_FILES))
-            $this->file = &$_FILES[key($_FILES)];
+        if (count($__FILES))
+            $this->file = &$__FILES[key($__FILES)];
 
         // LOAD DEFAULT CONFIGURATION
         require "config.php";

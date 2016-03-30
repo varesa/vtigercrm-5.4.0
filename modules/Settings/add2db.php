@@ -17,10 +17,10 @@ global $upload_badext, $root_directory, $adb;
 $uploaddir = $root_directory . "/test/logo/"; // set this to wherever
 $saveflag = "true";
 $error_flag = "";
-$binFile = $_FILES['binFile']['name'];
-$imageContent = file_get_contents($_FILES['binFile']['tmp_name']);
+$binFile = $__FILES['binFile']['name'];
+$imageContent = file_get_contents($__FILES['binFile']['tmp_name']);
 if (preg_match('/(<\?(php)?)/i', $imageContent) == 0) {
-	$imageInfo = getimagesize($_FILES['binFile']['tmp_name']);
+	$imageInfo = getimagesize($__FILES['binFile']['tmp_name']);
 	$image_extensions_allowed = array('jpeg', 'png', 'jpg', 'pjpeg', 'x-png');
 	
 	if (!empty($imageInfo)) {
@@ -31,8 +31,8 @@ if (preg_match('/(<\?(php)?)/i', $imageContent) == 0) {
 			$filename = ltrim(basename(" " . $binFile));
 		}
 
-		$filetype = $_FILES['binFile']['type'];
-		$filesize = $_FILES['binFile']['size'];
+		$filetype = $__FILES['binFile']['type'];
+		$filesize = $__FILES['binFile']['size'];
 		$filetype_array = explode("/", $filetype);
 		$file_type_val = strtolower($filetype_array[1]);
 
@@ -53,7 +53,7 @@ if (preg_match('/(<\?(php)?)/i', $imageContent) == 0) {
 			if ($filename != "")
 				$error_flag = "2";
 		}
-		$errorCode = $_FILES['binFile']['error'];
+		$errorCode = $__FILES['binFile']['error'];
 		if ($errorCode == 4) {
 			$savelogo = "false";
 			$error_flag = "5";
@@ -69,7 +69,7 @@ if (preg_match('/(<\?(php)?)/i', $imageContent) == 0) {
 		}
 
 		if ($savelogo == "true") {
-			move_uploaded_file($_FILES["binFile"]["tmp_name"], $uploaddir . $_FILES["binFile"]["name"]);
+			move_uploaded_file($__FILES["binFile"]["tmp_name"], $uploaddir . $__FILES["binFile"]["name"]);
 
 			$organization_name = vtlib_purify($_REQUEST['organization_name']);
 			$org_name = vtlib_purify($_REQUEST['org_name']);

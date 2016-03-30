@@ -76,15 +76,15 @@ setObjectValuesFromRequest($focus);
 if(isset($_REQUEST['filename_hidden'])) {
 	$file_name = $_REQUEST['filename_hidden'];
 } else {
-	$file_name = $_FILES['filename']['name'];
+	$file_name = $__FILES['filename']['name'];
 }
-$errorCode =  $_FILES['filename']['error'];
+$errorCode =  $__FILES['filename']['error'];
 $errormessage = "";
-if($file_name != '' && $_FILES['filename']['size'] == 0)
+if($file_name != '' && $__FILES['filename']['size'] == 0)
 {
 	if($errorCode == 4 || $errorCode == 0)
 	{
-		 if($_FILES['filename']['size'] == 0)
+		 if($__FILES['filename']['size'] == 0)
 			 $errormessage = "<B><font color='red'>".$mod_strings['LBL_PLEASE_ATTACH']."</font></B> <br>";
 	}
 	else if($errorCode == 2)
@@ -97,7 +97,7 @@ if($file_name != '' && $_FILES['filename']['size'] == 0)
 	}
 	else if($errorCode == 3 )
 	{
-	     if($_FILES['filename']['size'] == 0)
+	     if($__FILES['filename']['size'] == 0)
 		     $errormessage = "<b><font color='red'>".$mod_strings['LBL_PLEASE_ATTACH']."</font></b><br>";
 	}
 	else{}
@@ -116,10 +116,10 @@ if($file_name != '' && $_FILES['filename']['size'] == 0)
 }
 
 
-if($_FILES["filename"]["size"] == 0 && $_FILES["filename"]["name"] != '')
+if($__FILES["filename"]["size"] == 0 && $__FILES["filename"]["name"] != '')
 {
         $file_upload_error = true;
-        $_FILES = '';
+        $__FILES = '';
 }
 
 if((isset($_REQUEST['deletebox']) && $_REQUEST['deletebox'] != null) && $_REQUEST['addbox'] == null)

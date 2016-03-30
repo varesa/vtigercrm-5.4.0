@@ -218,7 +218,7 @@ if($_REQUEST['migration_option'] == 'db_details')
 }
 elseif($_REQUEST['migration_option'] == 'dump_details')
 {
-	$old_dump_details = $_FILES['old_dump_filename'];
+	$old_dump_details = $__FILES['old_dump_filename'];
 	$old_dump_filename = $old_dump_details['name'];
 	$migrationlog->debug("Dump file name ==> $old_dump_filename");
 

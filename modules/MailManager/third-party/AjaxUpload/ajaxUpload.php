@@ -37,7 +37,7 @@ class qqUploadedFileXhr {
 }
 
 /**
- * Handle file uploads via regular form post (uses the $_FILES array)
+ * Handle file uploads via regular form post (uses the $__FILES array)
  */
 class qqUploadedFileForm {
 	
@@ -46,16 +46,16 @@ class qqUploadedFileForm {
      * @return boolean TRUE on success
      */
     function save($path) {
-        if(!move_uploaded_file($_FILES['qqfile']['tmp_name'], $path)){
+        if(!move_uploaded_file($__FILES['qqfile']['tmp_name'], $path)){
             return false;
         }
         return true;
     }
     function getName() {
-        return $_FILES['qqfile']['name'];
+        return $__FILES['qqfile']['name'];
     }
     function getSize() {
-        return $_FILES['qqfile']['size'];
+        return $__FILES['qqfile']['size'];
     }
 }
 
@@ -74,7 +74,7 @@ class qqFileUploader {
 
         if (isset($_GET['qqfile'])) {
 			$this->file = new qqUploadedFileXhr();
-        } elseif (isset($_FILES['qqfile'])) {
+        } elseif (isset($__FILES['qqfile'])) {
             $this->file = new qqUploadedFileForm();
         } else {
             $this->file = false; 

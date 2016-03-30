@@ -93,16 +93,16 @@ class Documents extends CRMEntity {
 		$filetype_fieldname = $this->getFileTypeFieldName();
 		$filename_fieldname = $this->getFile_FieldName();
 		if($this->column_fields[$filetype_fieldname] == 'I' ){
-			if($_FILES[$filename_fieldname]['name'] != ''){
-				$errCode=$_FILES[$filename_fieldname]['error'];
+			if($__FILES[$filename_fieldname]['name'] != ''){
+				$errCode=$__FILES[$filename_fieldname]['error'];
 					if($errCode == 0){
-						foreach($_FILES as $fileindex => $files)
+						foreach($__FILES as $fileindex => $files)
 						{
 							if($files['name'] != '' && $files['size'] > 0){
-								$filename = $_FILES[$filename_fieldname]['name'];
+								$filename = $__FILES[$filename_fieldname]['name'];
 								$filename = from_html(preg_replace('/\s+/', '_', $filename));
-								$filetype = $_FILES[$filename_fieldname]['type'];
-								$filesize = $_FILES[$filename_fieldname]['size'];
+								$filetype = $__FILES[$filename_fieldname]['type'];
+								$filesize = $__FILES[$filename_fieldname]['size'];
 								$filelocationtype = 'I';
 								$binFile = sanitizeUploadFileName($filename, $upload_badext);
 								$filename = ltrim(basename(" ".$binFile)); //allowed filename like UTF-8 characters
@@ -168,7 +168,7 @@ class Documents extends CRMEntity {
 
 		$file_saved = false;
 
-		foreach($_FILES as $fileindex => $files)
+		foreach($__FILES as $fileindex => $files)
 		{
 			if($files['name'] != '' && $files['size'] > 0)
 			{

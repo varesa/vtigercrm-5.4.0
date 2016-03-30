@@ -224,7 +224,7 @@ class Products extends CRMEntity {
 
 		$file_saved = false;
 
-		foreach($_FILES as $fileindex => $files)
+		foreach($__FILES as $fileindex => $files)
 		{
 			if($files['name'] != '' && $files['size'] > 0)
 			{
