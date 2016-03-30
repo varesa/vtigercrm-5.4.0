@@ -47,6 +47,8 @@ $HELPDESK_SUPPORT_EMAIL_REPLY_ID = $HELPDESK_SUPPORT_EMAIL_ID;
 // DB Config moved to config.secrets.php
 include('config.secrets.php');
 
+$dbconfig['db_status'] = 'true';
+
 // TODO: test if port is empty
 // TODO: set db_hostname dependending on db_type
 $dbconfig['db_hostname'] = $dbconfig['db_server'].$dbconfig['db_port'];
@@ -156,11 +158,12 @@ $currency_name = 'Euro';
 
 // default charset
 // default charset default value = 'UTF-8' or 'ISO-8859-1'
-$default_charset = 'ISO-8859-1';
+$default_charset = 'UTF-8';
 
 // default language
 // default_language default value = en_us
-$default_language = 'en_us';
+$default_language = 'fi_fi';
+$languages = Array('en_us' => 'English', 'fi_fi'=>'Suomi');
 
 // add the language pack name to every translation string in the display.
 // translation_string_prefix default value = false
@@ -176,7 +179,7 @@ $display_empty_home_blocks = false;
 $disable_stats_tracking = false;
 
 // Generating Unique Application Key
-$application_unique_key = '213cc3f6b230a89bd65b249b9a96f56e';
+//$application_unique_key = 'see db configuration above';
 
 // trim descriptions, titles in listviews to this value
 $listview_max_textlength = 40;
@@ -185,7 +188,7 @@ $listview_max_textlength = 40;
 $php_max_execution_time = 0;
 
 // Set the default timezone as per your preference
-$default_timezone = 'UTC';
+$default_timezone = 'Europe/Helsinki';
 
 /** If timezone is configured, try to set it */
 if(isset($default_timezone) && function_exists('date_default_timezone_set')) {
