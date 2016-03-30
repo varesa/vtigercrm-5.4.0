@@ -33,7 +33,7 @@ if( $_SESSION['mail_send_error']!="")
 {
 	echo '<b><font color=red>'. $mod_strings{"LBL_NOTIFICATION_ERROR"}.'</font></b><br>';
 }
-session_unregister('mail_send_error');
+unset($_SESSION['mail_send_error']);
 
 $focus = CRMEntity::getInstance($currentModule);
 $smarty =  new vtigerCRM_Smarty();
