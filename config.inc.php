@@ -31,7 +31,7 @@ $USE_RTE = 'true';
 $PORTAL_URL = 'http://vtiger.com/customerportal';
 
 // helpdesk support email id and support name (Example: 'support@vtiger.com' and 'vtiger support')
-$HELPDESK_SUPPORT_EMAIL_ID = 'juhani@kuivanto.fi';
+$HELPDESK_SUPPORT_EMAIL_ID = 'admin@intra.alrekry.fi';
 $HELPDESK_SUPPORT_NAME = 'your-support name';
 $HELPDESK_SUPPORT_EMAIL_REPLY_ID = $HELPDESK_SUPPORT_EMAIL_ID;
 
@@ -44,19 +44,8 @@ $HELPDESK_SUPPORT_EMAIL_REPLY_ID = $HELPDESK_SUPPORT_EMAIL_ID;
       db_name
 */
 
-/*
-DB Credentials removed from version control!
-$dbconfig['db_server'] = '';
-$dbconfig['db_port'] = '';
-$dbconfig['db_username'] = '';
-$dbconfig['db_password'] = '';
-$dbconfig['db_name'] = '';
-$dbconfig['db_type'] = 'mysql';*/
-
+// DB Config moved to config.secrets.php
 include('config.secrets.php');
-
-
-$dbconfig['db_status'] = 'true';
 
 // TODO: test if port is empty
 // TODO: set db_hostname dependending on db_type
@@ -85,10 +74,10 @@ $dbconfigoption['ssl'] = false;
 
 $host_name = $dbconfig['db_hostname'];
 
-$site_URL = 'http://192.168.0.108/vtigercrm-5.4.0';
+$site_URL = 'http://10.0.0.204/vtiger/';
 
 // root directory path
-$root_directory = '/var/www/html/vtigercrm-5.4.0/';
+$root_directory = '/var/www/vtiger-5.4/';
 
 // cache direcory path
 $cache_dir = 'cache/';
@@ -167,13 +156,11 @@ $currency_name = 'Euro';
 
 // default charset
 // default charset default value = 'UTF-8' or 'ISO-8859-1'
-$default_charset = 'UTF-8';
+$default_charset = 'ISO-8859-1';
 
 // default language
 // default_language default value = en_us
-$default_language = 'fi_fi';
-
-$languages = Array('en_us'=>'English', 'fi_fi'=>'Suomi');
+$default_language = 'en_us';
 
 // add the language pack name to every translation string in the display.
 // translation_string_prefix default value = false
@@ -189,7 +176,7 @@ $display_empty_home_blocks = false;
 $disable_stats_tracking = false;
 
 // Generating Unique Application Key
-//$application_unique_key = ''; Removed from version control, see db configuration above
+$application_unique_key = '213cc3f6b230a89bd65b249b9a96f56e';
 
 // trim descriptions, titles in listviews to this value
 $listview_max_textlength = 40;
@@ -198,7 +185,7 @@ $listview_max_textlength = 40;
 $php_max_execution_time = 0;
 
 // Set the default timezone as per your preference
-$default_timezone = 'Europe/Helsinki';
+$default_timezone = 'UTC';
 
 /** If timezone is configured, try to set it */
 if(isset($default_timezone) && function_exists('date_default_timezone_set')) {
