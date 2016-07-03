@@ -7,41 +7,41 @@
  * Portions created by vtiger are Copyright (C) vtiger.
  * All Rights Reserved.
  ************************************************************************************/
-/**
- * German tranlsation by mic [ http://www.joomlasupportdesk.com ] 2009.10.02
- * IMPORTANT: save file with UTF-8 without BOM!
- **/
 $mod_strings = Array(
-
-	'LBL_MODULE_NAME'				=> 'Termine',
-  	'LBL_MODULE_TITLE'				=> 'Termine',
-	'LBL_NEW_OPERATION'				=> 'Neuer Termin',
-    'LBL_DEADLINES'					=> 'Termine',
-    'LBL_DEADLINE'					=> 'Termin',
-    'Deadline ID'					=> 'Termin ID',
-	'deadlinename'					=> 'Terminname',
-    'deadlines'						=> 'Termine',
+	 
+	'LBL_MODULE_NAME'=>'Projektmeilensteine',
+  	'LBL_MODULE_TITLE'=>'Projektmeilensteine',
+	'LBL_NEW_OPERATION'=>'neuer Projektmeilenstein',
+    'LBL_MILESTONES'=>'Projektmeilensteine',
+    'LBL_MILESTONE'=>'Projektmeilenstein',
+    'Project Milestone ID'=>'Meilenstein ID',
+    'projectmilestones' => 'Projektmeilensteine',
     //added this to translate the module name in the main app menu
-    'Deadline'						=> 'Termine',
+    'ProjectMilestone'=>'Projektmeilensteine',
     //
-    'SINGLE_Deadline'				=> 'Termin',
-    'LBL_CUSTOM_INFORMATION'		=> 'Kundeninfo',
-    'LBL_DEADLINE_INFORMATION'		=> 'Termin Information',
-    'LBL_DESCRIPTION_INFORMATION'	=> 'Beschreibung Information',
-    'Assigned To'					=> 'Zugewiesen an',
-    'deadlinedate'					=> 'Termindatum',
-    'milestone'						=> 'Termin',
-    'description'					=> 'Beschreibung',
-    'deadlinetype'					=> 'Art',
+    'SINGLE_ProjectMilestone' => 'Projektmeilenstein',
+    'LBL_CUSTOM_INFORMATION' => 'zusätzlich Information',
+    'LBL_PROJECT_MILESTONE_INFORMATION' => 'Meilensteininformation',
+    'LBL_DESCRIPTION_INFORMATION' => 'Beschreibung',
+    'Assigned To' => 'zuständig',
+    'Milestone Date' => 'Meilenstein Datum',
+    'Milestone' => 'Meilenstein',
+    'Type'=>'Typ',
     //'linktoproject'=>'Link To',
-    'projectid'						=> 'Project',
-    'Related To'					=> 'In Beziehung zu',
-  	'administrative'				=> 'Verwaltung',
-    'operative'						=> 'Operativ',
-    'other'							=> 'Anderes',
-    'Created Time'					=> 'Erstellt',
-    'Modified Time'					=> 'Geändert',
-    'Description'					=> 'Beschreibung',
-    //added for related lists
-    'DeadlineName'					=> 'Terminname'
-); ?>
+    'Related Project' => 'bezogenes Projekt',
+    'Related To' => 'bezogen auf',
+    'projectid' => 'bezogen auf',
+  	'administrative' => 'administrativ',
+    'operative' => 'operativ',
+    'other' => 'andere',
+    'Created Time' => 'erstellt',
+    'Modified Time' => 'geändert',
+    'description' => 'Beschreibung',
+    'Description' => 'Beschreibung',
+    //added for related lists 
+    'Project Milestone Name' => 'Meilensteinname',
+    'Project Milestone No' => 'Meilenstein Nr',
+	'ProjectMilestone ID' => 'Meilenstein ID',
+);
+
+?>

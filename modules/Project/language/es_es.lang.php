@@ -6,6 +6,14 @@
  * The Initial Developer of the Original Code is vtiger.
  * Portions created by vtiger are Copyright (C) vtiger.
  * All Rights Reserved.
+ * 
+ * ***********************************************************
+*  Module       : Project
+*  Language     : ES Spanish
+*  Version      : vt5.4.0
+*  Created Date : 2012-02-27
+*  Author       : JPL TSolucio, S.L.
+*  License      : MPL 1.1
  ************************************************************************************/
 $mod_strings = Array(
 
@@ -28,17 +36,15 @@ $mod_strings = Array(
     'projectid' => 'ID Proyecto',  
     'Project ID'=>'ID Proyecto',
     'Assigned To' => 'Asignado a',
-    'startdate' => 'Fecha inicio',
-    'targetenddate' => 'Fecha fin prevista',
-    'actualenddate' => 'Fecha fin real',
-    'projectstatus'=>'Estado',
-    'projecttype'=>'Tipo',
-    'linktoaccountscontacts'=>'Enlaza con',
-    'targetbudget'=>'Presupuesto previsto',
-    'projecturl'=>'URL Proyecto',
-    'projectpriority'=>'Prioridad Proyecto',
-    'progress'=>'Progreso',
-    'linktopotentials'=>'Enlaza con',
+    'Start Date' => 'Fecha inicio',
+    'Target End Date' => 'Fecha fin prevista',
+    'Actual End Date' => 'Fecha fin real',
+    'Status'=>'Estado',
+    'Type'=>'Tipo',
+    'Target Budget'=>'Presupuesto previsto',
+    'Project Url'=>'URL Proyecto',
+    'Priority'=>'Prioridad Proyecto',
+    'Progress'=>'Progreso',
     'Related To' => 'Relacionado con',
     'administrative' => 'administrativo',
     'operative' => 'operativo',
@@ -46,11 +52,13 @@ $mod_strings = Array(
     'low' => 'baja',
     'normal' => 'normal',
     'high' => 'alta',
-    'in progress' => 'en progreso',
-    'in planning' => 'planificación',
-    'on hold' => 'en espera',
-    'archived' => 'archivado',
-    'complete' => 'finalizado',
+    'prospecting' => 'Buscando',
+    'in progress' => 'En progreso',
+    'initiated' => 'Iniciado',
+    'on hold' => 'En espera',
+    'archived' => 'Archivado',
+    'completed' => 'Finalizado',
+    'delivered'=>'Entregado',
     'Created Time' => 'Fecha Creación',
     'Modified Time' => 'Fecha Modificación',
     'Description' => 'Descripción',
@@ -59,10 +67,17 @@ $mod_strings = Array(
     'Deadline' => 'Entrega',
     'Operation' => 'Actividad',
     'Project Name' => 'Nombre Proyecto',
-    'LBL_RELATED_OPERATIONS' => 'Actividades',
-    'LBL_RELATED_DEADLINES' => 'Entregas',
-    
+    'LBL_RELATED_PROJECT_TASKS' => 'Actividades',
+    'LBL_RELATED_PROJECT_MILESTONES' => 'Hitos',
 
+	'Charts' => 'Gráficos',
+	'LBL_PROGRESS_CHART' => 'Gráfico Progreso',
+	'Project No' => 'Nº Proyecto',
+
+	'Project Milestones' => 'Hitos Proyecto',
+	'Project Tasks' => 'Actividades Proyecto',
+	'Project Team' => 'Equipo Proyecto',
+	'Project ID' => 'Id Proyecto',
 );
 
 ?>

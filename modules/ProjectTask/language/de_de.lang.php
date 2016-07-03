@@ -7,48 +7,47 @@
  * Portions created by vtiger are Copyright (C) vtiger.
  * All Rights Reserved.
  ************************************************************************************/
-/**
- * German tranlsation by mic [ http://www.joomlasupportdesk.com ] 2009.10.02
- * IMPORTANT: save file with UTF-8 without BOM!
- **/
 $mod_strings = Array(
 
-	'LBL_MODULE_NAME'				=> 'Arbeitsabläufe',
-  	'LBL_MODULE_TITLE'				=> 'Arbeitsabläufe',
-	'LBL_NEW_OPERATION'				=> 'Neuer Arbeitsablauf',
-    'LBL_OPERATIONS'				=> 'Arbeitsabläufe',
-    'LBL_OPERATION'					=> 'Arbeitsabläufe',
-
-    'Operation ID'					=> 'Arbeitsablauf ID',
-	'operationname'					=> 'Arbeitsablauf Name',
-    'operations'					=> 'Arbeitsabläufe',
+    'LBL_MODULE_NAME'=>'Projektaufgaben',
+    'LBL_MODULE_TITLE'=>'Projektaufgaben',
+    'LBL_NEW_PROJECTTASK'=>'neue Projektaufgaben',
+    'LBL_PROJECTTASKS'=>'Projektaufgaben',
+    'LBL_PROJECTTASK'=>'Projektaufgabe',
+    'Project Task ID'=>'Projektaufgaben ID',
+    'projecttasks' => 'Projektaufgaben',
     //added this to translate the module name in the main app menu
-    'Operation'						=> 'Arbeitsabläufe',
-    //
-    'SINGLE_Operation'				=> 'Arbeitsablauf',
-	'LBL_CUSTOM_INFORMATION'		=> 'Kundeninfo',
-    'LBL_OPERATION_INFORMATION'		=> 'Arbeitsablauf Information',
-    'LBL_DESCRIPTION_INFORMATION'	=> 'Beschriebung Information',
-    'Assigned To'					=> 'Zugewiesen an',
+    'ProjectTask'=>'Projektaufgaben',
+    'SINGLE_ProjectTask' => 'Projektaufgabe',
+    'LBL_CUSTOM_INFORMATION' => 'zusätzliche Information',
+    'LBL_PROJECT_TASK_INFORMATION' => 'Aufgabeninformation',
+    'LBL_DESCRIPTION_INFORMATION' => 'Beschreibung',
+    'Assigned To' => 'zuständig',
     //'linktoproject' => 'Link to Project',
-    'projectid'						=> 'In Beziehung zu',
-    'operationpriority'				=> 'Wichtigkeit',
-    'operationprogress'				=> 'Fortschritt',
-    'operationtype'					=> 'Art',
-    'operationhours'				=> 'Arbeitsstunden',
-    'startdate'						=> 'Beginn',
-    'enddate'						=> 'Ende',
-    'Related To'					=> 'In Beziehung zu',
-   	'administrative'				=> 'Verwaltung',
-    'operative'						=> 'Operativ',
-    'other'							=> 'Anderes',
-    'low'							=> 'Niedrig',
-    'normal'						=> 'Normal',
-    'high'							=> 'Hoch',
-    'Created Time'					=> 'Erstellt',
-    'Modified Time'					=> 'Geändert',
-    'Description'					=> 'Beschreibung',
-    'description'					=> 'Beschreibung',
-    //added for related lists
-    'OperationName'					=> 'Arbeitsablauf Name'
-); ?>
+    'Related Project' => 'bezogenes Projekt',
+    'Priority' => 'Priorität',
+    'Progress' => 'Fortschritt',
+    'Type'=>'Typ',
+    'Worked Hours'=>'Stundeneinsatz',
+    'Start Date'=>'Startdatum',
+    'End Date'=>'Endedatum',
+    'Related To' => 'bezogen auf',
+    'projectid' => 'bezogen auf',
+    'administrative' => 'administrativ',
+    'operative' => 'operativ',
+    'other' => 'andere',
+    'low' => 'gering',
+    'normal' => 'normal',
+    'high' => 'hoch',
+    'Created Time' => 'erstellt',
+    'Modified Time' => 'geändert',
+    'Description' => 'Beschreibung',
+    'description' => 'Beschreibung',
+    //added for related lists 
+    'Project Task Name' => 'Aufgabenname',
+    'Project Task No' => 'Aufgabennr.',
+    'Project Task Number' => 'Aufgaben Code',
+	'ProjectTask ID'=>'Projektaufgaben-ID',    
+);
+
+?>

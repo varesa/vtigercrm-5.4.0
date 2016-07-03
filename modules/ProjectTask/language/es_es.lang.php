@@ -6,34 +6,40 @@
  * The Initial Developer of the Original Code is vtiger.
  * Portions created by vtiger are Copyright (C) vtiger.
  * All Rights Reserved.
+ * 
+ * ***********************************************************
+*  Module       : ProjectTask
+*  Language     : ES Spanish
+*  Version      : vt5.4.0
+*  Created Date : 2012-02-27
+*  Author       : JPL TSolucio, S.L.
+*  License      : MPL 1.1
  ************************************************************************************/
 $mod_strings = Array(
 
 	'LBL_MODULE_NAME'=>'Actividades',
   	'LBL_MODULE_TITLE'=>'Actividades',
-	'LBL_NEW_OPERATION'=>'Nueva Actividad',
-    'LBL_OPERATIONS'=>'Actividades',
-    'LBL_OPERATION'=>'Actividades',
-    'Operation ID'=>'ID Actividad',
-	'operationname' => 'Nombre Actividad',
-    'operations' => 'actividades',
-    //added this to translate the module name in the main app menu
-    'Operation'=>'Actividades',
-    //
-    'SINGLE_Operation' => 'Actividad',
+	'LBL_NEW_PROJECTTASK'=>'Nueva Actividad',
+    'LBL_PROJECTTASKS'=>'Actividades',
+    'LBL_PROJECTTASK'=>'Actividades',
+    'Project Task ID'=>'ID Actividad',
+    'projectasks' => 'actividades',
+    'ProjectTask'=>'Actividades',
+    'SINGLE_ProjectTask' => 'Actividad',
 	'LBL_CUSTOM_INFORMATION' => 'Información Personalizada',
-    'LBL_OPERATION_INFORMATION' => 'Información Actividad',
+    'LBL_PROJECT_TASK_INFORMATION' => 'Información Actividad',
     'LBL_DESCRIPTION_INFORMATION' => 'Descripción',
     'Assigned To' => 'Asignado a',
     //'linktoproject' => 'Link to Project',
-    'projectid' => 'Proyecto',
-    'operationpriority' => 'Prioridad',
-    'operationprogress' => 'Progreso',
-    'operationtype'=>'Tipo',
-    'operationhours'=>'Horas Trabajadas',
-    'startdate'=>'Fecha inicio',
-    'enddate'=>'Fecha fin',
+    'Related Project' => 'Proyecto relacionado',
+    'Priority' => 'Prioridad',
+    'Progress' => 'Progreso',
+    'Type'=>'Tipo',
+    'Worked Hours'=>'Horas Trabajadas',
+    'Start Date'=>'Fecha inicio',
+    'End Date'=>'Fecha fin',
     'Related To' => 'Relacionado con',
+    'projectid' => 'Proyecto',
    	'administrative' => 'administrativo',
     'operative' => 'operativo',
     'other' => 'otro',
@@ -44,8 +50,11 @@ $mod_strings = Array(
     'Modified Time' => 'Fecha Modificación',
     'Description' => 'Descripción',
     'description' => 'Descripción',
-    //added for related lists 
-    'OperationName' => 'Nombre Actividad',
+    //added for related lists
+    'Project Task Name' => 'Nombre Actividad',
+    'Project Task No' => 'Nº Actividad',
+    'Project Task Number' => 'Código Actividad',
+	'ProjectTask ID'=>'Id Actividad',
 );
 
 ?>

@@ -1,14 +1,13 @@
 <?php
-/*+**********************************************************************************
- * The contents of this file are subject to the vtiger CRM Public License Version 1.0
- * ("License"); You may not use this file except in compliance with the License
- * The Original Code is:  vtiger CRM Open Source
- * The Initial Developer of the Original Code is vtiger.
- * Portions created by vtiger are Copyright (C) vtiger.
- * All Rights Reserved.
- ************************************************************************************/
-$mod_strings = Array(
+/***********************************************************
+*  Module       : Projects
+*  Language     : French
+*  Version      : 5.4.0 
+*  License      : GPL
+*  Author       : ABOnline solutions http://www.vtiger-crm.fr
+***********************************************************/
 
+ $mod_strings = Array(
   	'LBL_MODULE_NAME'=>'Projets',
   	'LBL_MODULE_TITLE'=>'Projets',
     'LBL_NEW_PROJECT'=>'Nouveau Project',
@@ -51,16 +50,34 @@ $mod_strings = Array(
     'on hold' => 'en attente',
     'archived' => 'archivé',
     'complete' => 'terminé',
-    'Created Time' => 'Heure de création',
+    'Created Time' => 'Date de création',
     'Modified Time' => 'Dernière modification',
     'Description' => 'Description',
     'description' => 'Description',
-    '--none--' => '--indéfini--',
+    '--none--' => '--aucun--',
     'Deadline' => 'Deadline',
     'Operation' => 'Tâche',
     'Project Name' => 'Nom du Projet',
     'LBL_RELATED_OPERATIONS' => 'Tâches du Projet',
     'LBL_RELATED_DEADLINES' => 'Dealines',
+	'LBL_RELATED_PROJECT_TASKS' => 'Tâches du projet',
+    'LBL_RELATED_PROJECT_MILESTONES' => 'Jalons du projet',
+    
+	'Target End Date' => 'Date de fin prévue',
+    'Actual End Date ' => 'Date de fin effective',
+    'Target Budget ' => 'Budget prévisionnel',
+    'Project Url ' => 'URL du projet',
+    'Progress' => 'Progression',
+	
+    'Charts' => 'Graphiques',
+	'LBL_PROGRESS_CHART' => 'Graphique de progression',
+	'Project No' => 'Projet N°',
+	
+	'Project Milestones' => 'Jalons du Projet',
+	'Project Tasks' => 'Tâches du projet',
+	'Project Team' => 'Equipe projet',
+	'Project ID' => 'Projet ID',
+	
 );
 
 ?>

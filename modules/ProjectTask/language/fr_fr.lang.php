@@ -21,7 +21,7 @@ $mod_strings = Array(
     'Operation'=>'Tâches',
     //
     'SINGLE_Operation' => 'Tâche',
-	'LBL_CUSTOM_INFORMATION' => 'Information Spécifique',
+	'LBL_CUSTOM_INFORMATION' => 'Informations personalisées',
     'LBL_OPERATION_INFORMATION' => 'Information sur la tâche',
     'LBL_DESCRIPTION_INFORMATION' => 'Description',
     'Assigned To' => 'Assigné à',
@@ -41,8 +41,8 @@ $mod_strings = Array(
     'low' => 'basse',
     'normal' => 'normale',
     'high' => 'haute',
-    'Created Time' => 'Heure de Création',
-    'Modified Time' => 'Heure de Modification',
+    'Created Time' => 'Créée le',
+    'Modified Time' => 'Modifiée le',
     'Description' => 'Description',
     'description' => 'Description',
     //added for related lists 

@@ -6,41 +6,49 @@
  * The Initial Developer of the Original Code is vtiger.
  * Portions created by vtiger are Copyright (C) vtiger.
  * All Rights Reserved.
+ * 
+ * ***********************************************************
+*  Module       : ProjectMilestone
+*  Language     : ES Spanish
+*  Version      : vt5.4.0
+*  Created Date : 2012-02-27
+*  Author       : JPL TSolucio, S.L.
+*  License      : MPL 1.1
  ************************************************************************************/
 $mod_strings = Array(
 	 
-	'LBL_MODULE_NAME'=>'Entregas',
-  	'LBL_MODULE_TITLE'=>'Entregas',
-	'LBL_NEW_OPERATION'=>'Nueva Entrega',
-    'LBL_DEADLINES'=>'Entregas',
-    'LBL_DEADLINE'=>'Entrega',
-    'Deadline ID'=>'ID Entrega', 
-	'deadlinename' => 'Nombre Entrega',
-    'deadlines' => 'entregas',
-    //added this to translate the module name in the main app menu
-    'Deadline'=>'Entregas',
-    //
-    'SINGLE_Deadline' => 'Entrega',
+	'LBL_MODULE_NAME'=>'Hitos',
+  	'LBL_MODULE_TITLE'=>'Hitos',
+	'LBL_NEW_OPERATION'=>'Nuevo Hito',
+    'LBL_MILESTONES'=>'Hitos',
+    'LBL_MILESTONE'=>'Hito',
+    'Project Milestone ID'=>'ID Hito', 
+	'ProjectMilestone' => 'Hitos',
+    'projectmilestones' => 'Hitos',
+    'SINGLE_ProjectMilestone' => 'Hito',
     'LBL_CUSTOM_INFORMATION' => 'Información Personalizada',
-    'LBL_DEADLINE_INFORMATION' => 'Información Entrega',
+    'LBL_PROJECT_MILESTONE_INFORMATION' => 'Información Hito',
     'LBL_DESCRIPTION_INFORMATION' => 'Descripción',
-    'Assigned To' => 'Asignado a',
-    'deadlinedate' => 'Fecha Entrega',
-    'milestone' => 'Hito',
     'description' => 'Descripción',
-    'deadlinetype'=>'Tipo',
+    'Assigned To' => 'Asignado a',
+    'Milestone' => 'Hito',
+    'Type'=>'Tipo',
     //'linktoproject'=>'Link To',
-    'projectid' => 'Proyecto',
+    'Related Project' => 'Proyecto relacionado',
     'Related To' => 'Relacionado con',
+	'projectid' => 'Relacionado con',
   	'administrative' => 'administrativo',
     'operative' => 'operativo',
     'other' => 'otro',
+    '--none--' => '--ninguno--',
     'Created Time' => 'Fecha Creación',
     'Modified Time' => 'Fecha Modificación',
-    'description' => 'Descripción',
     'Description' => 'Descripción',
     //added for related lists 
-    'DeadlineName' => 'Nombre Entrega',
+    'Project Milestone Name' => 'Nombre Hito',
+	'Project Milestone No' => 'Nº Hito',
+    'Milestone Date'=>'Fecha Hito',
+	'ProjectMilestone ID' => 'Id Hito',
 
 );
 

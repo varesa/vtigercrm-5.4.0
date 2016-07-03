@@ -184,11 +184,11 @@ class Import_Index_Controller {
 		$importDirectory = Import_Utils::getImportDirectory();
 		$temporaryFileName = Import_Utils::getImportFilePath($current_user);
 
-		if(!is_uploaded_file($__FILES['import_file']['tmp_name'])) {
+		if(!is_uploaded_file($_FILES['import_file']['tmp_name'])) {
 			$userInputObject->set('error_message', getTranslatedString('LBL_FILE_UPLOAD_FAILED', 'Import'));
 			return false;
 		}
-		if ($__FILES['userfile']['size'] > $uploadMaxSize) {
+		if ($_FILES['userfile']['size'] > $uploadMaxSize) {
 			$userInputObject->set('error_message', getTranslatedString('LBL_IMPORT_ERROR_LARGE_FILE', 'Import').
 												' $uploadMaxSize.'.getTranslatedString('LBL_IMPORT_CHANGE_UPLOAD_SIZE', 'Import'));
 			return false;
@@ -198,7 +198,7 @@ class Import_Index_Controller {
 			return false;
 		}
 
-		$fileCopied = move_uploaded_file($__FILES['import_file']['tmp_name'], $temporaryFileName);
+		$fileCopied = move_uploaded_file($_FILES['import_file']['tmp_name'], $temporaryFileName);
 		if(!$fileCopied) {
 			$userInputObject->set('error_message', getTranslatedString('LBL_IMPORT_FILE_COPY_FAILED', 'Import'));
 			return false;

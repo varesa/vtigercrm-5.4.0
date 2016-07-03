@@ -9,23 +9,22 @@
  ************************************************************************************/
 $mod_strings = Array(
 	 
-	'LBL_MODULE_NAME'=>'Deadlines',
-  	'LBL_MODULE_TITLE'=>'Deadlines',
-	'LBL_NEW_OPERATION'=>'Nouvelle Deadline',
-    'LBL_DEADLINES'=>'Deadlines',
-    'LBL_DEADLINE'=>'Deadline',
-    'Deadline ID'=>'ID de la Deadline', 
-	'deadlinename' => 'Nom de la Deadline',
-    'deadlines' => 'deadlines',
+	'LBL_MODULE_NAME'=>'Jalons',
+  	'LBL_MODULE_TITLE'=>'Jalons',
+	'LBL_NEW_OPERATION'=>'Nouveau jalon',
+    'LBL_MILESTONES'=>'Jalons',
+    'LBL_MILESTONE'=>'Jalon',
+    'Project Milestone ID'=>'Jalon ID', 
+    'projectmilestones' => 'Jalon Projet ',
     //added this to translate the module name in the main app menu
-    'Deadline'=>'Deadlines',
-    //
-    'SINGLE_Deadline' => 'Deadline',
+    'ProjectMilestone'=>'Jalons Projet ',
+
+    'SINGLE_ProjectMilestone' => 'Jalon',
     'LBL_CUSTOM_INFORMATION' => 'Information Spécifique',
-    'LBL_DEADLINE_INFORMATION' => 'Information sur la Deadline',
+    'LBL_PROJECT_MILESTONE_INFORMATION' => 'Information sur le Jalon',
     'LBL_DESCRIPTION_INFORMATION' => 'Description Information',
     'Assigned To' => 'Assigné à',
-    'deadlinedate' => 'Date de la Deadline',
+    'Milestone Date' => 'Date de Jalon',
     'milestone' => 'Etape-Clé',
     'description' => 'Description',
     'deadlinetype'=> 'Type',
@@ -41,7 +40,9 @@ $mod_strings = Array(
     'description' => 'Description',
     'Description' => 'Description',
     //added for related lists 
-    'DeadlineName' => 'Nom de la Deadline',
+    'Project Milestone Name' => 'Nom du jalon',
+    'Project Milestone No' => 'Jalon No',
+	'ProjectMilestone ID' => 'Jalon ID',
 );
 
 ?>
