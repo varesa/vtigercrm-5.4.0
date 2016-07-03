@@ -2839,3 +2839,11 @@ a.allMnu:Hover{
 	text-align:center;
 	background-color:white;
 }
+
+
+
+/* Customizations */
+
+#txtbox_Kuvaus {
+    height: 600px;
+}
