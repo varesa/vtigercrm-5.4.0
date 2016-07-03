@@ -168,6 +168,7 @@ function getListOfRecords(obj, sModule, iId,sParentTab)
 									</td>
 								{/if}
 								<td class="dvtTabCache" align="right" style="width:100%">
+                                                                        <input type="button" value="Haastattelunäkymä" class="crmbutton small edit" onclick='window.location.href="hakijanakyma.php?id={$ID}"'>
 									{if $EDIT_DUPLICATE eq 'permitted'}
 									<input title="{$APP.LBL_EDIT_BUTTON_TITLE}" accessKey="{$APP.LBL_EDIT_BUTTON_KEY}" class="crmbutton small edit" onclick="DetailView.return_module.value='{$MODULE}'; DetailView.return_action.value='DetailView'; DetailView.return_id.value='{$ID}';DetailView.module.value='{$MODULE}'; submitFormForAction('DetailView','EditView');" type="button" name="Edit" value="&nbsp;{$APP.LBL_EDIT_BUTTON_LABEL}&nbsp;">&nbsp;
 									{/if}
