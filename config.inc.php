@@ -113,7 +113,9 @@ $upload_badext = array('php', 'php3', 'php4', 'php5', 'pl', 'cgi', 'py', 'asp', 
 $includeDirectory = $root_directory.'include/';
 
 // list_max_entries_per_page default value = 20
-$list_max_entries_per_page = '20';
+//$list_max_entries_per_page = '20';
+// muutettu 31.78.2016 by jv
+$list_max_entries_per_page = '200';
 
 // limitpage_navigation default value = 5
 $limitpage_navigation = '5';
