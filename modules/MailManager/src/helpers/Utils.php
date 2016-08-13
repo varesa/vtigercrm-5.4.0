@@ -19,7 +19,14 @@ class MailManager_Utils {
 	
 	function allowedFileExtension($filename) {
 		global $upload_badext;
-		$parts = explode('.', $filename);
+		$matches = array();
+		preg_match('/^=\?UTF-8\?Q\?(.*)\?=$/', $filename, $matches);
+		if(count($matches) == 2) {
+			$newname = quoted_printable_decode($matches[1]);
+		} else {
+			$newname = $filename;
+		}
+		$parts = explode('.', $newname);
 		if (count($parts) > 1) {
 			$extension = $parts[count($parts)-1];
 			return (in_array(strtolower($extension), $upload_badext) === false);

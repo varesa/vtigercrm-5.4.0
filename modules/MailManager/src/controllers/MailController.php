@@ -140,9 +140,9 @@ class MailManager_MailController extends MailManager_Controller {
 						$entityId = $relateto[1];
 						$parent_module = getSalesEntityType($entityId);
 						$description = getMergedDescription($body,$entityId,$parent_module);
-                                                if($description == false) {
-                                                    $description = $body; // Fallback
-                                                }
+						if($description == false) {
+							$description = $body; // Fallback
+						}
 					} else {
 						$description = $body;
 					}
@@ -224,17 +224,17 @@ class MailManager_MailController extends MailManager_Controller {
 				$mail->readFromDB($request->get('_muid'));
 				$attachment = $mail->attachments(true, $attachmentName);
 
-                if($attachment[$attachmentName]) {
-                    // Send as downloadable
-                    header("Content-type: application/octet-stream");
-                    header("Pragma: public");
-                    header("Cache-Control: private");
-                    header("Content-Disposition: attachment; filename=$attachmentName");
-                    echo $attachment[$attachmentName];
-                } else {
-                    header("Content-Disposition: attachment; filename=INVALIDFILE");
-                    echo "";
-                }
+				if($attachment[$attachmentName]) {
+					// Send as downloadable
+					header("Content-type: application/octet-stream");
+					header("Pragma: public");
+					header("Cache-Control: private");
+					header("Content-Disposition: attachment; filename=$attachmentName");
+					echo $attachment[$attachmentName];
+				} else {
+					header("Content-Disposition: attachment; filename=INVALIDFILE");
+					echo "";
+				}
 			} else {
 				header("Content-Disposition: attachment; filename=INVALIDFILE");
 				echo "";
