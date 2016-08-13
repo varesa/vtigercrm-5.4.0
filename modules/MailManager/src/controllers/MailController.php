@@ -11,6 +11,18 @@ include_once 'include/Webservices/Create.php';
 include_once 'vtlib/Vtiger/Mailer.php';
 include_once 'vtlib/Vtiger/Version.php';
 
+
+function qpdecode($string) {
+	$matches = array();
+	preg_match('/^=\?UTF-8\?Q\?(.*)\?=$/', $string, $matches);
+	if(count($matches) == 2) {
+		return quoted_printable_decode($matches[1]);
+	} else {
+		return $string;
+	}
+}
+
+
 /**
  * Class which controls Mail operation
  */
@@ -45,6 +57,7 @@ class MailManager_MailController extends MailManager_Controller {
 			$viewer = $this->getViewer();
 			$viewer->assign('FOLDER', $folder);
 			$viewer->assign('MAIL', $mail);
+			$viewer->register_modifier("qpdec", qpdecode);
 			$uicontent = $viewer->fetch($this->getModuleTpl('Mail.Open.tpl'));
 
 			$metainfo  = array(
