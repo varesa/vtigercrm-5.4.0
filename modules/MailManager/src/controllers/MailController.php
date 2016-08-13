@@ -141,7 +141,7 @@ class MailManager_MailController extends MailManager_Controller {
 						$parent_module = getSalesEntityType($entityId);
 						$description = getMergedDescription($body,$entityId,$parent_module);
                                                 if($description == false) {
-                                                    $description = body; // Fallback
+                                                    $description = $body; // Fallback
                                                 }
 					} else {
 						$description = $body;
