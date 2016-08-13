@@ -26,7 +26,7 @@ class VtigerWebserviceObject{
 	private static $_fromNameCache = array();
 		
 	static function fromName($adb,$entityName){
-		
+	        error_log($entityName);	
 		$rowData = false;
 		
 		// If the information not available in cache?
@@ -47,7 +47,8 @@ class VtigerWebserviceObject{
 			return new VtigerWebserviceObject($rowData['id'],$rowData['name'],
 						$rowData['handler_path'],$rowData['handler_class']);
 		}
-		throw new WebServiceException(WebServiceErrorCode::$ACCESSDENIED,"Permission to perform the operation is denied for name");
+                return false;
+		//throw new WebServiceException(WebServiceErrorCode::$ACCESSDENIED,"Permission to perform the operation is denied for name");
 	}
 
 	// Cache variables to enable result re-use
@@ -74,7 +75,6 @@ class VtigerWebserviceObject{
 			return new VtigerWebserviceObject($rowData['id'],$rowData['name'],
 					$rowData['handler_path'],$rowData['handler_class']);
 		}
-		
 		throw new WebServiceException(WebServiceErrorCode::$ACCESSDENIED,"Permission to perform the operation is denied for id");
 	}
 	

@@ -53,6 +53,7 @@ class EmailTemplate {
 	public function process(){
 		$variableList = $this->getTemplateVariableListForModule($this->module);
 		$handler = vtws_getModuleHandlerFromName($this->module, $this->user);
+                if($handler == false) return false;
 		$meta = $handler->getMeta();
 		$referenceFields = $meta->getReferenceFieldDetails();
 		$fieldColumnMapping = $meta->getFieldColumnMapping();
@@ -162,11 +163,12 @@ class EmailTemplate {
 			}
 		}
 		$this->processed = true;
+                return true;
 	}
 
 	public function getProcessedDescription(){
 		if(!$this->processed){
-			$this->process();
+			if($this->process() == false) return false;
 		}
 		return $this->processedDescription;
 	}

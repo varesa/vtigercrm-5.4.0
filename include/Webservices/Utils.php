@@ -425,6 +425,7 @@ function vtws_addWebserviceOperationParam($operationId,$paramName,$paramType,$se
 function vtws_getModuleHandlerFromName($name,$user){
 	global $adb, $log;
 	$webserviceObject = VtigerWebserviceObject::fromName($adb,$name);
+        if($webserviceObject == false) return false;
 	$handlerPath = $webserviceObject->getHandlerPath();
 	$handlerClass = $webserviceObject->getHandlerClass();
 
