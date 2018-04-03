@@ -9,7 +9,7 @@
   *
   ********************************************************************************/
 
-$enable_local_backup = 'true';
+$enable_local_backup = 'false';
 
 $enable_ftp_backup = 'false';
 
